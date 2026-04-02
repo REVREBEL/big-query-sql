@@ -1,4 +1,26 @@
-# --- macOS System Files ---
+# --- Diagnostic Reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# --- Dependency Directories ---
+node_modules/
+
+# --- Optional Npm Cache Directory ---
+.npm
+
+# --- Optional Eslint Cache ---
+.eslintcache
+
+# --- Optional Stylelint Cache ---
+.stylelintcache
+
+# --- Dotenv Environment Variable Files ---
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# --- MacOS System Files ---
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -6,9 +28,10 @@ Icon
 ._*
 .Spotlight-V100
 .Trashes
+.temp
+.cache
 
-# --- Security & Credentials (CRITICAL) ---
-# Never push service account keys or environment variables
+# --- Security & Credentials ---
 *.json
 *.pem
 *.p12
@@ -18,17 +41,23 @@ auth.py
 secrets.py
 
 # --- BigQuery / Dataform / IDEs ---
-# If you eventually use Dataform
 node_modules/
 package-lock.json
 .df-credentials.json
 compiled/
-# VS Code / JetBrains metadata
+
+# --- VS Code / JetBrains Metadata ---
 .vscode/
+.vscode-test
 .idea/
 
 # --- Documentation & Logs ---
 *.log
-# Exclude CSV/Excel files if you use them for testing but don't want them in GitHub
+logs
+npm-debug.log*
+.pnpm-debug.log*
+
+# --- Exclude CSV/Excel Files ---
 *.csv
 *.xlsx
+
