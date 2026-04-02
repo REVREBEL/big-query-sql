@@ -1,0 +1,34 @@
+# --- macOS System Files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Security & Credentials (CRITICAL) ---
+# Never push service account keys or environment variables
+*.json
+*.pem
+*.p12
+.env
+.env.*
+auth.py
+secrets.py
+
+# --- BigQuery / Dataform / IDEs ---
+# If you eventually use Dataform
+node_modules/
+package-lock.json
+.df-credentials.json
+compiled/
+# VS Code / JetBrains metadata
+.vscode/
+.idea/
+
+# --- Documentation & Logs ---
+*.log
+# Exclude CSV/Excel files if you use them for testing but don't want them in GitHub
+*.csv
+*.xlsx
